@@ -36,6 +36,13 @@ body {
   transform: rotateY(180deg);
 }
 
+.memory-card.disabled {
+  box-shadow: none;
+}
+.memory-card.disabled img {
+  display: none;
+}
+
 .front-face, .back-face {
   width: 100%;
   height: 100%;
