@@ -21,6 +21,14 @@ body {
   perspective: 1000px;
 }
 
+.winner-image {
+  display: none;
+}
+
+.winner-image.show {
+  display: flex;
+}
+
 .memory-card {
   width: calc(15% - 10px);
   height: calc(15% - 10px);
@@ -39,7 +47,12 @@ body {
 .memory-card.disabled {
   box-shadow: none;
 }
+
 .memory-card.disabled img {
+  display: none;
+}
+
+.memory-card.hide {
   display: none;
 }
 

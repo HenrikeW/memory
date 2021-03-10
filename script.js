@@ -4,6 +4,7 @@ const cardsArray = Array.from(cards);
 let oneCardFlipped = false;
 let firstCard, secondCard;
 let boardLocked = false;
+let matchCounter = 0;
 
 const flipCard = (event) => {
   if (boardLocked) return;
@@ -37,6 +38,7 @@ const checkMatch = () => {
 const disableCards = () => {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
+  matchCounter += 1;
 
   setTimeout(() => {
     firstCard.classList.add("disabled");
@@ -44,6 +46,7 @@ const disableCards = () => {
     firstCard = null;
     secondCard = null;
     boardLocked = false;
+    winGame();
   }, 1500);
 };
 
@@ -62,7 +65,15 @@ const shuffle = () => {
     let randomPosition = Math.floor(Math.random() * 24);
     card.style.order = randomPosition;
   })
-}
-shuffle(); 
+};
+shuffle();
+
+const winGame = () => {
+  let winnerImage = document.getElementById("winner-image");
+  if (matchCounter === 12) {
+    cardsArray.forEach(card => card.classList.add("hide"))
+    winnerImage.classList.add("show")
+  }
+};
 
 cardsArray.forEach(card => card.addEventListener("click", flipCard));
