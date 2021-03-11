@@ -1,6 +1,6 @@
 ## Memory Game
 
-The classical game "memory" in an online one-player version. There'S a plant theme behind the images. Be proud if you can identify all the species! 🌿
+The classical game "memory" in an online one-player version. There's a plant theme behind the images. Be proud if you can identify all the species! 🌿
 
 # What it does
 
