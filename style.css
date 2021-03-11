@@ -14,8 +14,8 @@ body {
 }
 
 .gameboard {
-  width: 90vw;
-  height: 90vw;
+  width: 70vw;
+  height: 70vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -131,6 +131,8 @@ button {
 @media (max-width: 1024px) {
   .gameboard {
     padding-top: 30px;
+    width: 90vw;
+    height: 90vw;
   }
 
   .memory-card {
@@ -144,6 +146,10 @@ button {
 }
 
 @media (max-width: 767px) {
+  .gameboard {
+    width: 90vw;
+    height: 90vw;
+  }
   .memory-card {
     width: calc(25% - 10px);
     height: calc(25% - 10px);
