@@ -66,7 +66,10 @@ const resetBoard = () => {
 const shuffle = () => {
   resetBoard();
   let winnerImage = document.getElementById("winnerImage");
-  winnerImage.classList.remove("show")
+  winnerImage.classList.remove("show");
+  let resetContainer = document.getElementById("resetContainer");
+  resetContainer.classList.remove("hide");
+  
   cardsArray.forEach(card => {
     cardsArray.forEach(card => card.classList.remove("hide", "disabled", "flip"))
     let randomPosition = Math.floor(Math.random() * 24);

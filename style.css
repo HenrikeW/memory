@@ -5,9 +5,12 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   background-color: whitesmoke;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .gameboard {
@@ -19,6 +22,7 @@ body {
   justify-content: center;
   align-content: flex-start;
   perspective: 1000px;
+  padding-top: 50px;
 }
 
 .winner-image {
@@ -50,11 +54,12 @@ body {
 button {
   width: 25%;
   margin: 20px;
-  background-color: darkslateblue;
+  background-color: #133945;
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 5px;;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .memory-card {
@@ -93,4 +98,58 @@ button {
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+.footer {
+  background-color: #133945;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.credits {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.personal {
+  line-height: 23px;
+}
+
+ a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .gameboard {
+    padding-top: 30px;
+  }
+
+  .memory-card {
+    width: calc(20% - 10px);
+    height: calc(20% - 10px);
+  }
+
+  .footer {
+    margin-top: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+  }
+
+  .footer {
+    margin-top: 900px;
+  }
 }
