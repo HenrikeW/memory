@@ -24,4 +24,4 @@ I didn't copy all the clicking animations though. Also, I added the buttons to r
 
 # View it live
 
-You can access the project here:
+You can access the project here: https://plant-memory.netlify.app/
