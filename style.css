@@ -11,8 +11,8 @@ body {
 }
 
 .gameboard {
-  width: 95vh;
-  height: 95vh;
+  width: 90vw;
+  height: 90vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +27,34 @@ body {
 
 .winner-image.show {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.congratulations {
+  width: 50vw;
+}
+
+.reset-container {
+  order: 30;
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.reset-container.hide {
+  display: none;
+}
+
+button {
+  width: 25%;
+  margin: 20px;
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;;
 }
 
 .memory-card {

@@ -10,8 +10,10 @@
 <body>
   <section class="gameboard">
 
-    <div id="winner-image">
+    <div id="winnerImage" class="winner-image">
       <img class="congratulations" src="images/Party.png" alt="party confetti">
+      <button onclick="shuffle()">Play again</button>
+      <p>It took you <span id="turnCounter"></span> turns to solve the memory!</p>
     </div>
 
     <div data-image="anemoneHepatica" class="memory-card">
@@ -132,6 +134,10 @@
     <div data-image="viola" class="memory-card">
       <img class="front-face" src="images/viola.jpg" alt="Viola">
       <img class="back-face" src="images/pattern.jpg" alt="leaves pattern">
+    </div>
+
+    <div id="resetContainer" class="reset-container">
+      <button>Reset</button>
     </div>
 
   </section>
